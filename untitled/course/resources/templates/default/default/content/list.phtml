@@ -1,0 +1,5 @@
+Это лист номер <?= $this->getNumber() ?>
+
+<?php foreach ($this->getChildren() as $child): ?>
+    <?php $child->toHtml() ?>
+<?php endforeach ?>

@@ -31,8 +31,8 @@ class Request
         $url = explode('?', $url);
         $arrUrl = array_filter(explode('/', $url[0]));
 
-        $this->controllerName = array_shift($arrUrl);
-        $this->actionName = array_shift($arrUrl);
+        $this->controllerName = (!empty($arrUrl[0])) ? array_shift($arrUrl) : 'Default';
+        $this->actionName = (!empty($arrUrl[0])) ? array_shift($arrUrl) : 'default';
 
         while (!empty($arrUrl)) {
             $this->get[array_shift($arrUrl)] = array_shift($arrUrl);

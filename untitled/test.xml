@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<layout>
+
+    <default>
+        <block type="\Core\Block\Template" template="page/2columns.phtml" name="root">
+            <block type="\Core\Block\Template" template="page/head.phtml" name="head" />
+            <block type="\Core\Block\Template" template="page/content.phtml" name="content" />
+        </block>
+    </default>
+
+    <default_default>
+        <block name="root">
+            <block name="content">
+                <block type="\App\View\Block\Content\List1" template="default/default/content/list.phtml" name="list1">
+                    <block type="\App\View\Block\Content\List2" template="default/default/content/list.phtml" name="list2"/>
+                </block>
+            </block>
+        </block>
+    </default_default>
+
+</layout>
